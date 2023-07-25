@@ -56,7 +56,7 @@ class SplashLevel extends Phaser.Scene {
     /* START PRELOAD ITEMS */
     this.load.baseURL =
       'https://jossieslaysallday.github.io/flappy-pigeon-jrz/';
-
+    this.load.image('bird', 'staic/assets/bird.png');
     /* END PRELOAD ITEMS */
   }
   private logo: Phaser.GameObjects.Image;
@@ -85,7 +85,7 @@ class SplashLevel extends Phaser.Scene {
     });
 
     setTimeout(() => {
-      //this.scene.start('MainLevel');
+      this.scene.start('MainLevel');
     }, 2000);
   }
 
@@ -101,7 +101,9 @@ class MainLevel extends Phaser.Scene {
 
   preload() {}
 
-  create() {}
+  create() {
+    this.physics.add.sprite(50, 200, 'bird');
+  }
 
   update() {}
 }
