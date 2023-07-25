@@ -54,6 +54,8 @@ class SplashLevel extends Phaser.Scene {
     });
 
     /* START PRELOAD ITEMS */
+    this.load.baseURL =
+      'https://jossieslaysallday.github.io/flappy-pigeon-jrz/';
 
     /* END PRELOAD ITEMS */
   }
